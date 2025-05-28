@@ -1,5 +1,7 @@
 const express=require("express")
 const app=express()
+require('dotenv').config();
+
 const cors = require('cors')
 const collectionDB = require("./db")
 const route  = require("./routes/user.route")
@@ -14,6 +16,6 @@ app.get("/",(req,res)=>{
 collectionDB()
 app.use("/users-book",route)
 app.use("/movie",movie)
-app.listen(6934,()=>{
+app.listen(process.env.PORT,()=>{
     console.log("Server started")
 })

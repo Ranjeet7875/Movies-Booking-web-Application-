@@ -1,5 +1,5 @@
 const mongoose=require("mongoose")
-const DB="mongodb://localhost:27017/moviesbook"
+const DB="mongodb+srv://ranvishwakarma122:nNjOcMP7oTBVqWVK@cluster0.cbs5t.mongodb.net/moviesbook"
 const collectionDB=async()=>{
     try {
         await mongoose.connect(DB)
